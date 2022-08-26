@@ -6,6 +6,7 @@
 - Timing function: the _easing_ of an animation
 - CSS Variables: custom properties that can be inherited by elements and set by JavaScript:
 - what to animate: Transform and opacity(great), color and background(umm good), Height width left right etc (a big no)
+- Properties like transform and opacity are less expensive to animate because they don't require recalculation of the layout or a repaint. Other properties like height and width require a repaint and negatively impact the performance of the page.
 
 ```css
 :root {

@@ -5,6 +5,7 @@
 - Delay: how long it takes before an animation _starts_
 - Timing function: the _easing_ of an animation
 - CSS Variables: custom properties that can be inherited by elements and set by JavaScript:
+- what to animate: Transform and opacity(great), color and background(umm good), Height width left right etc (a big no)
 
 ```css
 :root {

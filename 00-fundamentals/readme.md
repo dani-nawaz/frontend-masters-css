@@ -5,8 +5,10 @@
 - Delay: how long it takes before an animation _starts_
 - Timing function: the _easing_ of an animation
 - CSS Variables: custom properties that can be inherited by elements and set by JavaScript:
-- what to animate: Transform and opacity(great), color and background(umm good), Height width left right etc (a big no)
-- Properties like transform and opacity are less expensive to animate because they don't require recalculation of the layout or a repaint. Other properties like height and width require a repaint and negatively impact the performance of the page.
+- what to animate: Transform and opacity(great)(GPU accelerated), color and background(umm good)(we have to talk to the browser, we are not moving anything we are triggering paint we are still having 60fps but not if we apply to many elements be carefull), Height width left right etc (a big no)
+- Properties like transform and opacity are less expensive to animate because they don't require recalculation of the layout or a repaint. Other properties like height and width require a repaint and negatively impact the performance of the page:(reflowing all the other properties kinda of domino effect).
+- if we are not having 60fps the animation would look like jaggy one.
+- if we don't have green listing in lighthouse(google performance) then the site drops down in the SEO listing 
 
 ```css
 :root {
